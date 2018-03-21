@@ -107,11 +107,11 @@ bool Currency::getBlockReward(size_t medianSize, size_t currentBlockSize, uint64
         }
 
         if (alreadyGeneratedCoins == 1) {
-            baseReward =m_moneySupply*0.10;
+            baseReward =m_moneySupply*0.40;
         }
 
      if (alreadyGeneratedCoins + baseReward >= m_moneySupply) {
-                baseReward = 500;
+                baseReward = 0;
             }
   medianSize = std::max(medianSize, m_blockGrantedFullRewardZone);
   if (currentBlockSize > UINT64_C(2) * medianSize) {
